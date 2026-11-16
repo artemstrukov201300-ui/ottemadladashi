@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff0f5">
+  <title>Тёма × Даша — маленький сайт о большой любви</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root { --pink:#ff75a8; --deep:#9e426e; --ink:#493844; --paper:#fffafd; }
+    * { box-sizing:border-box }
+    body { margin:0; color:var(--ink); font-family:Manrope,Arial,sans-serif;
+      background:radial-gradient(circle at 10% 0%,#ffe1ed 0,transparent 32%),
+      radial-gradient(circle at 100% 30%,#f4e4ff 0,transparent 30%),#fff8fb; }
+    .wrap { width:min(100% - 28px,560px); margin:auto; padding:24px 0 44px; }
+    .top { text-align:center; padding:22px 12px 12px; }
+    .pill { display:inline-block; border:1px solid #ffd0e1; background:#ffffffb8; border-radius:99px;
+      padding:8px 13px; color:var(--deep); font-size:11px; letter-spacing:1.5px; font-weight:800; }
+    h1 { font:700 clamp(34px,10vw,52px)/1.08 Comfortaa,cursive; margin:18px 0 10px; color:#a74775; }
+    .subtitle { font-size:14px; line-height:1.7; color:#876d7d; margin:0 auto; max-width:360px; }
+    .card { background:#ffffffdb; border:1px solid #ffe0eb; border-radius:26px; padding:21px;
+      margin:18px 0; box-shadow:0 12px 35px #b85c8210; }
+    .eyebrow { color:#d36a96; font-size:10px; font-weight:800; letter-spacing:2px; text-transform:uppercase; }
+    h2 { font:700 22px Comfortaa,cursive; margin:9px 0 12px; color:#a74775; }
+    p { font-size:14px; line-height:1.85; margin:0 0 10px; }
+    .photo { display:block; width:100%; border-radius:23px; border:5px solid white;
+      box-shadow:0 10px 30px #6d42501c; margin:20px 0; }
+    .caption { text-align:center; font-size:11px; color:#a47c91; margin:-10px 0 20px; }
+    .heartline { text-align:center; color:#f17aa7; letter-spacing:8px; font-size:20px; margin:16px 0; }
+    .buttons { display:grid; gap:10px; margin-top:17px; }
+    button { border:0; border-radius:16px; padding:15px 16px; font:700 14px Manrope,sans-serif; cursor:pointer; }
+    .primary { color:white; background:linear-gradient(135deg,#ff83b1,#df659b); box-shadow:0 7px 18px #ec80a640; }
+    .soft { color:#a74775; background:#fff0f6; border:1px solid #ffd5e5; }
+    button:active { transform:scale(.985) }
+    #answer { display:none; margin-top:14px; padding:14px; border-radius:15px; background:#fff2f7; text-align:center;
+      color:#a74775; font:600 14px/1.7 Comfortaa,cursive; }
+    .qrbox { text-align:center; }
+    .qr { width:170px; max-width:65%; border:9px solid white; border-radius:18px; margin:10px auto; }
+    .tiny { color:#a88c9b; font-size:11px; line-height:1.6; }
+    footer { text-align:center; padding:18px 8px 0; color:#a47c91; font-size:12px; line-height:1.8; }
+    .signature { font:700 19px Comfortaa,cursive; color:#b24e7d; }
+    @media(min-width:500px){ .wrap{padding-top:40px}.card{padding:26px} }
+  </style>
+</head>
+<body>
+<main class="wrap">
+  <header class="top">
+    <span class="pill">ЛИЧНЫЙ УГОЛОК ТЁМЫ</span>
+    <h1>Тёма ♥ Даша</h1>
+    <p class="subtitle">Небольшой сайт, который существует по одной очень важной причине — потому что есть ты.</p>
+  </header>
+
+  <section class="card">
+    <div class="eyebrow">сообщение № 001</div>
+    <h2>Даш, это для тебя</h2>
+    <p>Я просто хочу сказать, что очень сильно тебя люблю. Ты делаешь мои дни лучше, даже когда мы просто переписываемся или говорим о какой-нибудь ерунде.</p>
+    <p>Мне нравится думать о тебе, улыбаться из-за твоих сообщений и понимать, что в этом огромном мире есть именно ты.</p>
+  </section>
+
+  <img class="photo" src="{{ url_for('static', filename='cat-love-1.jpeg') }}" alt="Милый снежный котёнок тянет лапку">
+  <div class="caption">это котик передаёт тебе любовь от Тёмы</div>
+
+  <section class="card">
+    <div class="eyebrow">сообщение № 002</div>
+    <h2>Ты особенная</h2>
+    <p>Даша, мне не нужны какие-то особенные поводы, чтобы говорить тебе приятные слова. Я хочу, чтобы ты знала: ты очень дорога мне.</p>
+    <p>Если бы я мог сохранить один момент в кармане и доставать его, когда скучаю, то это был бы момент, когда ты улыбаешься.</p>
+  </section>
+
+  <img class="photo" src="{{ url_for('static', filename='cat-love-2.jpeg') }}" alt="Два снежных котёнка, один целует другого">
+  <div class="caption">даже котики знают, как сильно я тебя люблю</div>
+
+  <section class="card">
+    <div class="eyebrow">сообщение № 003</div>
+    <h2>И ещё кое-что</h2>
+    <p>Я не обещаю быть идеальным, но обещаю стараться, заботиться о тебе и чаще напоминать, насколько ты важна для меня.</p>
+    <p>Пусть этот маленький сайт будет напоминанием: где-то есть Тёма, который очень-очень любит Дашу.</p>
+    <div class="heartline">♡ ♡ ♡</div>
+    <div class="buttons">
+      <button class="primary" onclick="showLove()">Нажми, если улыбнулась</button>
+      <button class="soft" onclick="showSecret()">Открыть секретное сообщение</button>
+    </div>
+    <div id="answer" role="status"></div>
+  </section>
+
+  <section class="card qrbox">
+    <div class="eyebrow">секретный вход</div>
+    <h2>Сохрани этот QR-код</h2>
+    <p>После публикации сайта наведи камеру телефона на код — и он откроется снова.</p>
+    <img class="qr" src="/qr.png" alt="QR-код сайта">
+    <p class="tiny">QR-код будет вести на настоящий адрес сайта после размещения в интернете.</p>
+  </section>
+
+  <footer>
+    Сделано с любовью и немного смущением<br>
+    <span class="signature">Тёма для Даши</span><br>
+    <span class="tiny">tema-x-dasha · самый милый уголок интернета</span>
+  </footer>
+</main>
+<script>
+  function showLove() {
+    const box = document.getElementById('answer');
+    box.style.display = 'block';
+    box.textContent = 'Ура! Тогда знай: Тёма сейчас улыбается ещё сильнее. Я тебя люблю!';
+  }
+  function showSecret() {
+    const box = document.getElementById('answer');
+    box.style.display = 'block';
+    box.textContent = 'Секрет: если бы можно было отправить объятие через экран, я бы уже отправил тебе миллион.';
+  }
+</script>
+</body>
+</html>
